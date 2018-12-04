@@ -47,7 +47,7 @@
 
                 <div class="form-group">
                   <label for="metThroughId">{{ trans('people.introductions_edit_met_through') }}</label>
-                  <select class="form-control" name="metThroughId" id="metThroughId">
+                  <select class="form-control" name="metThroughId" id="metThroughId select2">
                     <option value="">{{ trans('people.introductions_no_met_through') }}</option>
                     @foreach (auth()->user()->account->contacts()->real()->active()->get() as $metThroughContact)
 

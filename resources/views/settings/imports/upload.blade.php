@@ -63,7 +63,7 @@
 
                 <div class="form-group">
                     <label for="behaviour">{{ trans('settings.import_upload_behaviour') }}</label>
-                    <select class="form-control" name="behaviour" id="behaviour">
+                    <select class="form-control select2" name="behaviour" id="behaviour">
                         <option value="{{ \App\Services\VCard\ImportVCard::BEHAVIOUR_ADD }}" selected>{{ trans('settings.import_upload_behaviour_add') }}</option>
                         <option value="{{ \App\Services\VCard\ImportVCard::BEHAVIOUR_REPLACE }}">{{ trans('settings.import_upload_behaviour_replace') }}</option>
                     </select>

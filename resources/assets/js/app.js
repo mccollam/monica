@@ -334,4 +334,5 @@ loadLanguageAsync(window.Laravel.locale, true).then((lang) => {
 });
 
 $(document).ready(function() {
+    $('.select2').select2();
 });

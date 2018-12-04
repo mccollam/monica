@@ -61,7 +61,7 @@
           <label class="db fw6 lh-copy f6">
             {{ $t('people.contact_info_form_contact_type') }} <a class="fr normal" href="/settings/personalization" target="_blank">{{ $t('people.contact_info_form_personalize') }}</a>
           </label>
-          <select class="db w-100 h2" v-model="createForm.contact_field_type_id">
+          <select class="db w-100 h2 select2" v-model="createForm.contact_field_type_id">
             <option v-for="contactFieldType in contactFieldTypes" :key="contactFieldType.id" :value="contactFieldType.id">
               {{ contactFieldType.name }}
             </option>

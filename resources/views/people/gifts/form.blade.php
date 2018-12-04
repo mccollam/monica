@@ -56,7 +56,7 @@
                     {{ trans('people.gifts_add_someone', ['name' => $contact->first_name]) }}
                 </label>
             </div>
-            <select id="recipient" name="recipient" class="form-control">
+            <select id="recipient" name="recipient" class="form-control select2">
                 @foreach($familyRelationships as $familyRelationship)
                     <option value="{{ $familyRelationship->ofContact->id }}"
                         @if($gift->is_for === $familyRelationship->ofContact->id)

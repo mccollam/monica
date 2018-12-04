@@ -43,7 +43,7 @@
               <label class="db fw6 lh-copy f6">
                 {{ $t('people.pets_kind') }}
               </label>
-              <select class="db w-100 h2" v-model="updateForm.pet_category_id">
+              <select class="db w-100 h2 select2" v-model="updateForm.pet_category_id">
                 <option v-for="petCategory in petCategories" :value="petCategory.id">
                   {{ $t('people.pets_' + petCategory.name) }}
                 </option>
@@ -75,7 +75,7 @@
           <label class="db fw6 lh-copy f6">
             {{ $t('people.pets_kind') }}
           </label>
-          <select class="db w-100 h2" v-model="createForm.pet_category_id">
+          <select class="db w-100 h2 select2" v-model="createForm.pet_category_id">
             <option v-for="petCategory in petCategories" :value="petCategory.id">
               {{ $t('people.pets_' + petCategory.name) }}
             </option>

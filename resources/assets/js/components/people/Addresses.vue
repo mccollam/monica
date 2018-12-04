@@ -76,7 +76,7 @@
               <label class="db fw6 lh-copy f6">
                 {{ $t('people.contact_address_form_country') }}
               </label>
-              <select class="db w-100 h2" v-model="updateForm.country">
+              <select class="db w-100 h2 select2" v-model="updateForm.country">
                 <option v-for="country in countries" :value="country.id">
                   {{ country.country }}
                 </option>
@@ -135,7 +135,7 @@
           <label class="db fw6 lh-copy f6">
             {{ $t('people.contact_address_form_country') }}
           </label>
-          <select class="db w-100 h2" v-model="createForm.country">
+          <select class="db w-100 h2 select2" v-model="createForm.country">
             <option value="0"></option>
             <option v-for="country in countries" :value="country.id">
               {{ country.country }}

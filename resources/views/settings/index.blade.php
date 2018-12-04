@@ -66,7 +66,7 @@
               {{-- Locale --}}
               <div class="form-group">
                 <label for="locale">{{ trans('settings.locale') }}</label>
-                <select class="form-control" name="locale" id="locale">
+                <select class="form-control select2" name="locale" id="locale">
                   @foreach($locales as $locale)
                     <option value="{{ $locale['lang'] }}" {{ (auth()->user()->locale == $locale['lang'])?'selected':'' }}>{{ $locale['name'] }}</option>
                   @endforeach
@@ -82,7 +82,7 @@
               {{-- Way of displaying names --}}
               <div class="form-group">
                 <label for="name_order">{{ trans('settings.name_order') }}</label>
-                <select id="name_order" name="name_order" class="form-control">
+                <select id="name_order" name="name_order" class="form-control select2">
                   @foreach ($namesOrder as $nameOrder)
                   <option value="{{ $nameOrder }}" {{ (auth()->user()->name_order == $nameOrder) ? 'selected':'' }}>{{ trans('settings.name_order_'.$nameOrder) }}</option>
                   @endforeach
@@ -92,7 +92,7 @@
               {{-- Layout --}}
               <div class="form-group">
                 <label for="layout">{{ trans('settings.layout') }}</label>
-                <select class="form-control" name="layout" id="layout">
+                <select class="form-control select2" name="layout" id="layout">
                   <option value='false' {{ (auth()->user()->fluid_container == 'false')?'selected':'' }}>{{ trans('settings.layout_small') }}</option>
                   <option value='true' {{ (auth()->user()->fluid_container == 'true')?'selected':'' }}>{{ trans('settings.layout_big') }}</option>
                 </select>
